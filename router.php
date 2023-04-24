@@ -1,7 +1,8 @@
 <?php
 
 $routes = [
-    '/' => 'controllers/index.php'
+    '/' => 'controllers/index.php',
+    '/tasks' => 'controllers/tasks.php'
 ];
 
 function routeToController($uri, $routes)
