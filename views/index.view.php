@@ -13,9 +13,12 @@
                         <input
                             type="text"
                             id="search-box"
-                            class="w-52 block rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600"
+                            class="w-52 block rounded-md border-0 py-1.5 px-3 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600"
                         >
-                        <button type="submit" id="search-button" class="bg-blue-600 text-white py-1.5 px-4 rounded-md">
+                        <button
+                            type="submit"
+                            class="text-white py-1.5 px-4 rounded-md transition bg-blue-500 hover:bg-blue-600 active:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300"
+                        >
                             Search
                         </button>
                     </div>
@@ -45,9 +48,9 @@
             <div class="fixed inset-0 z-10 overflow-y-auto">
                 <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
                     <div
-                        class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+                        class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-md">
                         <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-                            <img class="image hidden mb-3 object-cover h-48 w-96"/>
+                            <img src="" class="image hidden mb-3 object-cover h-48 w-96" alt=""/>
                             <button id="image-trigger" class="bg-slate-600 text-white py-1.5 px-4 rounded-md">
                                 Select Image
                             </button>
