@@ -1,4 +1,4 @@
 <?php
 
-// Main controller
-require 'controllers/index.php';
+require 'functions.php';
+require 'router.php';
