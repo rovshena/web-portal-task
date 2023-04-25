@@ -1,7 +1,7 @@
-<?php require('partials/head.php') ?>
+<?php require 'partials/head.php'; ?>
 
     <main>
-        <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-7xl py-6 px-8">
             <h1 class="text-2xl font-bold">
                 Sorry. Internal Server Error.
             </h1>
@@ -13,4 +13,4 @@
         </div>
     </main>
 
-<?php require('partials/footer.php') ?>
+<?php require 'partials/footer.php'; ?>

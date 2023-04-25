@@ -29,7 +29,11 @@ if ($err) {
     abort(500);
 } else {
     $result = json_decode($response, true);
-    $accessToken = $result['oauth']['access_token'];
+    $accessToken = $result['oauth']['access_token'] ?? null;
+
+    if (!$accessToken) {
+        abort(500);
+    }
 
     $_SESSION['accessToken'] = $accessToken;
 }

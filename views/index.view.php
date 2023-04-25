@@ -1,29 +1,32 @@
-<?php require('partials/head.php') ?>
+<?php require 'partials/head.php'; ?>
 
     <header class="bg-white shadow">
-        <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-            <h1 class="text-3xl font-bold tracking-tight text-gray-900">Web Portal Task</h1>
+        <div class="mx-auto max-w-7xl py-6 px-8">
+            <h1 class="text-3xl font-bold">Web Portal Task</h1>
         </div>
     </header>
     <main>
-        <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-7xl py-6 px-8">
             <div class="flex justify-between mb-3">
                 <form id="search-form">
                     <div class="flex items-center gap-x-3">
                         <input
                             type="text"
-                            id="search-box"
-                            class="w-52 block rounded-md border-0 py-1.5 px-3 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600"
+                            id="search-input"
+                            class="w-52 rounded-md border-0 py-1.5 px-3 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-600"
                         >
                         <button
                             type="submit"
-                            class="text-white py-1.5 px-4 rounded-md transition bg-blue-500 hover:bg-blue-600 active:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300"
+                            class="text-white py-1.5 px-4 rounded-md transition-all bg-blue-500 hover:bg-blue-600 active:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300"
                         >
                             Search
                         </button>
                     </div>
                 </form>
-                <button id="modal-trigger" class="bg-slate-600 text-white py-1.5 px-4 rounded-md">
+                <button
+                    id="modal-trigger"
+                    class="text-white py-1.5 px-4 rounded-md transition-all bg-slate-500 hover:bg-slate-600 active:bg-slate-700 focus:outline-none focus:ring focus:ring-slate-300"
+                >
                     Open Modal
                 </button>
             </div>
@@ -46,17 +49,22 @@
         <div id="modal" class="relative z-10 hidden" aria-labelledby="modal-title" role="dialog" aria-modal="true">
             <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
             <div class="fixed inset-0 z-10 overflow-y-auto">
-                <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                <div class="flex min-h-full justify-center p-4 text-center items-center">
                     <div
-                        class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-md">
+                        class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-md"
+                    >
                         <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-                            <img src="" class="image hidden mb-3 object-cover h-48 w-96" alt=""/>
-                            <button id="image-trigger" class="bg-slate-600 text-white py-1.5 px-4 rounded-md">
+                            <img src="" class="image hidden mb-4 object-cover h-48 w-full" alt=""/>
+                            <button
+                                id="image-trigger"
+                                class="text-white py-1.5 px-4 rounded-md transition-all bg-slate-500 hover:bg-slate-600 active:bg-slate-700 focus:outline-none focus:ring focus:ring-slate-300"
+                            >
                                 Select Image
                             </button>
                         </div>
                         <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-                            <button type="button"
+                            <button
+                                type="button"
                                 class="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto"
                                 onclick="toggleModal()"
                             >
@@ -119,7 +127,7 @@
         }
 
         function search() {
-            const input = document.getElementById('search-box')
+            const input = document.getElementById('search-input')
             const keyword = input.value.toLowerCase()
             if (keyword.length) {
                 let data = dataset.filter((item) => {
@@ -166,4 +174,4 @@
 
     </script>
 
-<?php require('partials/footer.php') ?>
+<?php require 'partials/footer.php'; ?>
